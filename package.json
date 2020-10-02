@@ -1,0 +1,25 @@
+{
+  "name": "ctci189",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./build && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianhan/ctci189.git"
+  },
+  "keywords": [],
+  "author": "Jian Han <jianhan2018@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianhan/ctci189/issues"
+  },
+  "homepage": "https://github.com/jianhan/ctci189#readme"
+}
