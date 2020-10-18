@@ -1,7 +1,3 @@
-const hashStr = () => {
-
-}
-
 class LinkedList {
     constructor(head = null) {
         this.head = head;
@@ -80,4 +76,3 @@ ll.append(new LinkedListNode(3))
 console.log(ll.size())
 ll.dedupe();
 console.log(ll.size())
-

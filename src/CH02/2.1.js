@@ -1,7 +1,3 @@
-const hashStr = () => {
-
-}
-
 class LinkedList {
     constructor(head = null) {
         this.head = head;
@@ -72,12 +68,35 @@ class LinkedListNode {
 const ll = new LinkedList()
 
 ll.append(new LinkedListNode(3))
+ll.append(new LinkedListNode(333))
 ll.append(new LinkedListNode(2))
 ll.append(new LinkedListNode(1))
+ll.append(new LinkedListNode(111))
 ll.append(new LinkedListNode(1))
 ll.append(new LinkedListNode(2))
 ll.append(new LinkedListNode(3))
-console.log(ll.size())
-ll.dedupe();
-console.log(ll.size())
 
+const findNthFromLast = (linkedListNode, count) => {
+    if (linkedListNode === undefined || linkedListNode.next === null) {
+        return 0;
+    }
+
+    let nextIteration = findNthFromLast(linkedListNode.next, count)
+    if (isNaN(nextIteration)) {
+        return nextIteration;
+    }
+
+    let total = nextIteration + 1;
+
+    // console.log("Total is : ", total, "Count is : ", count)
+    // console.log('assert ', total, ',', count)
+    if (total === count) {
+        return linkedListNode;
+    }
+
+    return total;
+}
+
+const result = findNthFromLast(ll.head, 6)
+
+console.log(result)
